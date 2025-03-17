@@ -137,6 +137,8 @@ class MCPClient {
             const response = await this.processQuery(message);
             console.log("\n" + response);
           }
+        }catch(e){
+          console.log("Error in chatLoop: ", e);
         } finally {
           rl.close();
         }
